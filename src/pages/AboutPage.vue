@@ -5,7 +5,7 @@
     <section class="hero-section bg-primary text-white">
       <div class="container q-py-xl text-center">
         <div class="text-h2 text-weight-bold q-mb-md">
-          🥩 Yukpro
+          🥩 육프로
         </div>
         <div class="text-h5 q-mb-lg opacity-90">
           B2B 축산물 유통의 새로운 표준
