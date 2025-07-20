@@ -1,81 +1,43 @@
-육프로 서비스 1단계 구현 화면 목록
-기준 : MVP 핵심 기능 중심의 필수 화면 (총 12개 화면)
+# YukPro (yukpro)
 
-1. 인증 및 계정 관리 (3화면)
-   No.	화면명	주요 요소	비고
-   1.1	사업자 인증 시작	- 사업자번호 입력 필드
-- OCR 업로드/수동 입력 선택 버튼	국세청 API 연동
-  1.2	담당자 정보 입력	- 이름/휴대폰/이메일 필드
-- 휴대폰 인증(문자/SMS) 버튼	Firebase Auth 적용
-  1.3	로그인	- 이메일/비밀번호 입력
-- "비밀번호 찾기" 링크	JWT 토큰 발급
-2. 상품 탐색 (5화면)
-   No.	화면명	주요 요소	비고
-   2.1	메인(카테고리)	- 카테고리 탭(소/돼지/닭)
-- PWA 설치 유도 배너	Quasar QTab
-  2.2	상품 목록	- 상품 카드(이미지+가격)
-- 필터(부위/등급/가격)	Infinite Scroll
-  2.3	상품 상세	- 이미지 갤러리
-- 5kg 단위 가격 표시
-- "장바구니 추가" 버튼	비활성 상태
-  2.4	검색 결과	- 검색어 강조 표시
-- "결과 없음" UI	Elasticsearch Lite
-  2.5	오프라인 화면	- 캐시된 상품 목록
-- 네트워크 재연결 안내	Workbox.js
-3. 운영자 CMS (2화면)
-   No.	화면명	주요 요소	비고
-   3.1	상품 등록	- 이미지 업로드 영역
-- 유통기한 캘린더	Cloudinary 연동
-  3.2	재고 관리	- 재고량 수동 조정 입력
-- 입고 예약 테이블	Sync Boot Admin
-4. 공통 컴포넌트 (2화면)
-   No.	화면명	주요 요소	비고
-   4.1	헤더/네비게이션	- 로고
-- 햄버거 메뉴(My페이지/설정)	PWA 설치 버튼
-  4.2	에러 처리	- "인증 실패" 팝업
-- 새로고침 유도 UI	국세청 코드 매핑
-  화면 플로우 다이어그램
-  Diagram
-  Code
+Yukpro is a B2B digital meat distribution platform enabling small-quantity (5kg units) orders with verified unboxing reviews for restaurants and butchers.
 
+## Install the dependencies
 
+```bash
+yarn
+# or
+npm install
+```
 
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
+```bash
+quasar dev
+```
 
+### Lint the files
 
+```bash
+yarn lint
+# or
+npm run lint
+```
 
+### Format the files
 
-우선순위 설정
-등급	화면	이유
-P0	1.1, 1.2, 2.1, 2.2, 2.3	핵심 가입/탐색 플로우
-P1	1.3, 2.4, 4.1	부가 기능
-P2	3.1, 3.2, 4.2	운영자 전용
-추가 고려 사항
-디자인 시스템
+```bash
+yarn format
+# or
+npm run format
+```
 
-버튼: Primary(주황색), Secondary(회색)
+### Build the app for production
 
-폰트: Noto Sans KR (Regular/Bold)
+```bash
+quasar build
+```
 
-테스트 케이스
+### Customize the configuration
 
-PWA: iOS Safari에서 "홈 화면 추가" 동작 확인
-
-OCR: 저해상도 이미지 인증 테스트
-
-산출물
-
-Figma 디자인: 각 화면별 3가지 상태(정상/로딩/에러)
-
-API 문서: Swagger 연동 완료본
-
-작업 시작 전 체크리스트
-
-모든 화면에 GA4 이벤트 트래킹 ID 할당
-
-Quasar 테마 컬러 코드 확정 (#FF6B00 주색상)
-
-국세청 API 테스트 계정 발급 완료
-
-이 목록은 JIRA 이슈로 전환 가능한 수준으로 상세화되었습니다.
-(※ 화면별 개발 소요 시간은 팀 보유 역량에 따라 1~3일/화면 예상)
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

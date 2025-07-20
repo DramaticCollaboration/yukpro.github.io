@@ -1,32 +1,47 @@
 {
-  "name": "vue-quasar-vite",
-  "version": "0.0.0",
+  "name": "yukpro",
+  "version": "0.0.1",
+  "description": "Yukpro is a B2B digital meat distribution platform enabling small-quantity (5kg units) orders with verified unboxing reviews for restaurants and butchers.",
+  "productName": "YukPro",
+  "author": "poh <qudansdl@gmail.com>",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "dev:https": "vite --host --https",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:pwa": "vue-tsc --noEmit && vite build --mode production",
-    "preview": "vite preview --https",
-    "preview:pwa": "vite preview --https --port 4173",
-    "generate-icons": "node scripts/generate-pwa-icons.js",
-    "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html --chrome-flags=\"--ignore-certificate-errors\""
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "postinstall": "quasar prepare"
   },
   "dependencies": {
-    "@quasar/extras": "^1.17.0",
-    "pinia": "^3.0.3",
-    "quasar": "^2.18.1",
-    "vue": "^3.5.17",
-    "vue-router": "4.5.1",
-    "workbox-window": "^7.3.0"
+    "axios": "^1.2.1",
+    "vue-i18n": "^11.0.0",
+    "pinia": "^3.0.1",
+    "@quasar/extras": "^1.16.4",
+    "quasar": "^2.16.0",
+    "vue": "^3.4.18",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@quasar/vite-plugin": "^1.9.0",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "sass": "1.89.2",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.5",
-    "vite-plugin-pwa": "^1.0.1",
-    "vue-tsc": "^2.1.6",
-    "@vitejs/plugin-basic-ssl": "^2.1.0"
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "globals": "^15.12.0",
+    "vue-tsc": "^2.0.29",
+    "@vue/eslint-config-typescript": "^14.4.0",
+    "vite-plugin-checker": "^0.9.0",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "prettier": "^3.3.3",
+    "@types/node": "^20.5.9",
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@quasar/app-vite": "^2.1.0",
+    "autoprefixer": "^10.4.2",
+    "typescript": "~5.5.3"
+  },
+  "engines": {
+    "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
   }
 }
