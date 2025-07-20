@@ -21,8 +21,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Install yarn
+        uses: yarn/action-setup@v2
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,10 +33,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Build
-        run: pnpm build
+        run: yarn build
         env:
           BASE_URL: '/'
 
