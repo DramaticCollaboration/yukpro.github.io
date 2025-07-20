@@ -16,7 +16,7 @@
         <q-toolbar-title class="cursor-pointer" @click="goToHome">
           <div class="row items-center q-gutter-sm">
             <span class="text-h5">🥩</span>
-            <span class="text-weight-bold">Yukpro</span>
+            <span class="text-weight-bold">육프로</span>
           </div>
         </q-toolbar-title>
 
