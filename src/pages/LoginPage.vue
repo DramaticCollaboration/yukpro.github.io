@@ -4,7 +4,7 @@
       <!-- 로고 및 타이틀 -->
       <q-card-section class="text-center q-pb-md">
         <div class="text-h4 text-weight-bold text-primary q-mb-sm">
-          🥩 Yukpro
+          🥩 육프로
         </div>
         <div class="text-subtitle1 text-grey-7">
           B2B 축산물 유통 플랫폼
