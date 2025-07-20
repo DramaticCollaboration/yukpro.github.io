@@ -613,7 +613,7 @@
                       <q-card-section v-if="qna.answered">
                         <div class="text-subtitle2 text-weight-bold text-primary q-mb-sm">
                           <q-icon name="support_agent" class="q-mr-xs" />
-                          Yukpro 답변
+                          육프로 답변
                         </div>
                         <div class="text-body1">{{ qna.answer }}</div>
                         <div class="text-caption text-grey-6 q-mt-sm">

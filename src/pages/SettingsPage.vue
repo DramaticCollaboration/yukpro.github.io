@@ -1370,7 +1370,7 @@ const businessForm = ref({
   addressDetail: '육프로빌딩 2층',
   businessPhone: '02-1234-5678',
   fax: '02-1234-5679',
-  businessLicense: 'https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=사업자등록증'
+  businessLicense: 'https://placehold.co/400x300/4ECDC4/FFFFFF?text=사업자등록증'
 });
 
 const passwordForm = ref({

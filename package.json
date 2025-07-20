@@ -1,8 +1,8 @@
 {
   "name": "yukpro",
   "version": "0.0.1",
-  "description": "Yukpro is a B2B digital meat distribution platform enabling small-quantity (5kg units) orders with verified unboxing reviews for restaurants and butchers.",
-  "productName": "YukPro",
+  "description": "소상공인을 위한 5kg 단위 B2B 정육플랫폼, 언박싱 리뷰로 믿을 수 있는 유통 서비스.",
+  "productName": "육프로",
   "author": "poh <qudansdl@gmail.com>",
   "type": "module",
   "private": true,

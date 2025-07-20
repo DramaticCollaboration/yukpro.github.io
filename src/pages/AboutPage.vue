@@ -29,7 +29,7 @@
     <section class="features-section q-py-xl">
       <div class="container">
         <div class="text-h4 text-center text-weight-bold q-mb-xl">
-          왜 Yukpro를 선택해야 할까요?
+          왜 육프로를 선택해야 할까요?
         </div>
 
         <div class="row q-gutter-lg">
@@ -481,7 +481,7 @@
     <section class="cta-section bg-primary text-white q-py-xl">
       <div class="container text-center">
         <div class="text-h4 text-weight-bold q-mb-md">
-          지금 Yukpro와 함께하세요
+          지금 육프로와 함께하세요
         </div>
         <div class="text-subtitle1 q-mb-xl opacity-90">
           사업자등록증만 있으면 바로 시작할 수 있습니다

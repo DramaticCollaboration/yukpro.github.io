@@ -16,7 +16,7 @@
           <div>
             <div class="text-h4 text-weight-bold">개인정보처리방침</div>
             <div class="text-subtitle1 opacity-80">
-              Yukpro 개인정보 보호 및 처리방침
+              육프로 개인정보 보호 및 처리방침
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
             </div>
             <div class="section-content">
               <p>
-                주식회사 Yukpro(이하 "회사")는 다음의 목적을 위하여 개인정보를 처리합니다.
+                주식회사 육프로(이하 "회사")는 다음의 목적을 위하여 개인정보를 처리합니다.
                 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며,
                 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등
                 필요한 조치를 이행할 예정입니다.
@@ -1114,8 +1114,8 @@ const downloadPDF = () => {
 const sharePolicy = () => {
   if (navigator.share) {
     navigator.share({
-      title: 'Yukpro 개인정보처리방침',
-      text: 'Yukpro B2B 축산물 유통 플랫폼 개인정보처리방침',
+      title: '육프로 개인정보처리방침',
+      text: '육프로 B2B 축산물 유통 플랫폼 개인정보처리방침',
       url: window.location.href
     });
   } else {

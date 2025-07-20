@@ -15,7 +15,7 @@
           <div>
             <div class="text-h4 text-weight-bold">이용약관</div>
             <div class="text-subtitle1 opacity-80">
-              Yukpro 서비스 이용약관
+              육프로 서비스 이용약관
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="text-body2 text-grey-7 q-mt-xs">
                       본 약관은 <strong>2024년 1월 1일</strong>부터 시행되며,
-                      Yukpro 서비스 이용 시 동의가 필요합니다.
+                      육프로 서비스 이용 시 동의가 필요합니다.
                     </div>
                   </div>
                 </div>
@@ -75,8 +75,8 @@
             </div>
             <div class="section-content">
               <p>
-                본 약관은 주식회사 Yukpro(이하 "회사")가 운영하는 B2B 축산물 유통 플랫폼
-                "Yukpro"(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및
+                본 약관은 주식회사 육프로(이하 "회사")가 운영하는 B2B 축산물 유통 플랫폼
+                "육프로"(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및
                 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
               </p>
             </div>
@@ -388,7 +388,7 @@
                     <strong>이메일:</strong> support@yukpro.com
                   </div>
                   <div class="q-mb-sm">
-                    <strong>주소:</strong> 서울특별시 강남구 테헤란로 123, Yukpro 빌딩
+                    <strong>주소:</strong> 서울특별시 강남구 테헤란로 123, 육프로 빌딩
                   </div>
                   <div>
                     <strong>사업자등록번호:</strong> 123-45-67890
@@ -563,8 +563,8 @@ const downloadPDF = () => {
 const shareTerms = () => {
   if (navigator.share) {
     navigator.share({
-      title: 'Yukpro 이용약관',
-      text: 'Yukpro B2B 축산물 유통 플랫폼 이용약관',
+      title: '육프로 이용약관',
+      text: '육프로 B2B 축산물 유통 플랫폼 이용약관',
       url: window.location.href
     });
   } else {

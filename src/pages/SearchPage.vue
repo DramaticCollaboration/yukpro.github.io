@@ -388,7 +388,7 @@ const allProducts = ref([
     name: '한우 등심 A++',
     price: 85000,
     description: '1++ 등급 한우 등심, 마블링 우수',
-    image: 'https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=한우+등심',
+    image: 'https://placehold.co/400x300/FF6B6B/FFFFFF?text=한우+등심',
     category: 'beef',
     grade: '1++',
     origin: '국내산',
@@ -399,7 +399,7 @@ const allProducts = ref([
     name: '돼지 삼겹살',
     price: 15000,
     description: '국내산 신선한 삼겹살',
-    image: 'https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=돼지+삼겹살',
+    image: 'https://placehold.co/400x300/4ECDC4/FFFFFF?text=돼지+삼겹살',
     category: 'pork',
     grade: '1등급',
     origin: '국내산',
@@ -410,7 +410,7 @@ const allProducts = ref([
     name: '닭가슴살',
     price: 8000,
     description: '신선한 닭가슴살, 프로틴 풍부',
-    image: 'https://via.placeholder.com/400x300/45B7D1/FFFFFF?text=닭가슴살',
+    image: 'https://placehold.co/400x300/45B7D1/FFFFFF?text=닭가슴살',
     category: 'chicken',
     grade: '1등급',
     origin: '국내산',
@@ -421,7 +421,7 @@ const allProducts = ref([
     name: '한우 갈비',
     price: 65000,
     description: '한우 LA갈비, 구이용',
-    image: 'https://via.placeholder.com/400x300/96CEB4/FFFFFF?text=한우+갈비',
+    image: 'https://placehold.co/400x300/96CEB4/FFFFFF?text=한우+갈비',
     category: 'beef',
     grade: '1+',
     origin: '국내산',
@@ -432,7 +432,7 @@ const allProducts = ref([
     name: '돼지 목살',
     price: 18000,
     description: '고기 질이 좋은 목살',
-    image: 'https://via.placeholder.com/400x300/FFEAA7/FFFFFF?text=돼지+목살',
+    image: 'https://placehold.co/400x300/FFEAA7/FFFFFF?text=돼지+목살',
     category: 'pork',
     grade: '1등급',
     origin: '국내산',
@@ -445,19 +445,19 @@ const recommendedProducts = ref([
     id: 101,
     name: '추천 한우',
     price: 75000,
-    image: 'https://via.placeholder.com/400x300/DDA0DD/FFFFFF?text=추천+한우'
+    image: 'https://placehold.co/400x300/DDA0DD/FFFFFF?text=추천+한우'
   },
   {
     id: 102,
     name: '추천 삼겹살',
     price: 12000,
-    image: 'https://via.placeholder.com/400x300/98D8C8/FFFFFF?text=추천+삼겹살'
+    image: 'https://placehold.co/400x300/98D8C8/FFFFFF?text=추천+삼겹살'
   },
   {
     id: 103,
     name: '추천 닭고기',
     price: 7000,
-    image: 'https://via.placeholder.com/400x300/F7DC6F/FFFFFF?text=추천+닭고기'
+    image: 'https://placehold.co/400x300/F7DC6F/FFFFFF?text=추천+닭고기'
   }
 ]);
 

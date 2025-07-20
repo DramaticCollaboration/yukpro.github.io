@@ -1,6 +1,6 @@
 # YukPro (yukpro)
 
-Yukpro is a B2B digital meat distribution platform enabling small-quantity (5kg units) orders with verified unboxing reviews for restaurants and butchers.
+육프로 is a B2B digital meat distribution platform enabling small-quantity (5kg units) orders with verified unboxing reviews for restaurants and butchers.
 
 ## Install the dependencies
 

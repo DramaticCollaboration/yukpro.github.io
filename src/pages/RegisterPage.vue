@@ -13,7 +13,7 @@
             class="q-mr-md"
           />
           <div class="col">
-            <div class="text-h3 text-weight-bold">🥩 Yukpro</div>
+            <div class="text-h3 text-weight-bold">🥩 육프로</div>
             <div class="text-h5 q-mt-sm">담당자 정보 입력</div>
             <div class="text-subtitle1 opacity-80 q-mt-xs">
               본인인증 후 담당자 정보를 입력해주세요
@@ -473,7 +473,7 @@
         <q-card-section class="text-center q-py-xl">
           <q-icon name="celebration" size="80px" color="green" class="q-mb-md" />
           <div class="text-h4 text-weight-bold text-green-8 q-mb-md">가입 완료!</div>
-          <div class="text-h6 q-mb-sm">Yukpro에 오신 것을 환영합니다</div>
+          <div class="text-h6 q-mb-sm">육프로에 오신 것을 환영합니다</div>
           <div class="text-body1 text-grey-7">
             이제 5kg 단위로 신선한 축산물을 주문하실 수 있습니다
           </div>
@@ -584,10 +584,10 @@ const currentTermsContent = computed(() => {
     case 'service':
       return `
         <h3>제1조 (목적)</h3>
-        <p>이 약관은 Yukpro가 제공하는 B2B 축산물 유통 서비스의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 합니다.</p>
+        <p>이 약관은 육프로가 제공하는 B2B 축산물 유통 서비스의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 합니다.</p>
 
         <h3>제2조 (정의)</h3>
-        <p>1. "서비스"라 함은 Yukpro가 제공하는 모든 서비스를 의미합니다.</p>
+        <p>1. "서비스"라 함은 육프로가 제공하는 모든 서비스를 의미합니다.</p>
         <p>2. "회원"이라 함은 이 약관에 따라 회사와 이용계약을 체결한 자를 의미합니다.</p>
 
         <h3>제3조 (약관의 게시와 개정)</h3>

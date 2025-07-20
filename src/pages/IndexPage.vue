@@ -234,14 +234,14 @@ const popularProducts = ref([
     name: '한우 등심',
     price: 85000,
     description: '1++ 등급 한우 등심, 마블링 우수',
-    image: 'https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=한우+등심'
+    image: 'https://placehold.co/400x300/FF6B6B/FFFFFF?text=한우+등심'
   },
   {
     id: 2,
     name: '돼지 삼겹살',
     price: 15000,
     description: '국내산 신선한 삼겹살',
-    image: 'https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=돼지+삼겹살'
+    image: 'https://placehold.co/400x300/4ECDC4/FFFFFF?text=돼지+삼겹살'
   }
 ]);
 
@@ -253,7 +253,7 @@ const unboxingReviews = ref([
     customerName: '김사장님',
     date: '2024.07.15',
     type: 'video',
-    thumbnail: 'https://via.placeholder.com/400x225/FF6B6B/FFFFFF?text=언박싱+영상'
+    thumbnail: 'https://placehold.co/400x225/FF6B6B/FFFFFF?text=언박싱+영상'
   },
   {
     id: 2,
@@ -261,7 +261,7 @@ const unboxingReviews = ref([
     customerName: '박셰프님',
     date: '2024.07.18',
     type: 'image',
-    thumbnail: 'https://via.placeholder.com/400x225/4ECDC4/FFFFFF?text=언박싱+이미지'
+    thumbnail: 'https://placehold.co/400x225/4ECDC4/FFFFFF?text=언박싱+이미지'
   }
 ]);
 

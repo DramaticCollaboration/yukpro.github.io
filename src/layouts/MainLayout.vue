@@ -426,7 +426,7 @@
             </q-item-section>
             <q-item-section>
               <q-item-label>서비스 소개</q-item-label>
-              <q-item-label caption>Yukpro 플랫폼 안내</q-item-label>
+              <q-item-label caption>육프로 플랫폼 안내</q-item-label>
             </q-item-section>
           </q-item>
           <q-item clickable @click="goToTerms">
@@ -452,7 +452,7 @@
           <q-item>
             <q-item-section>
               <q-item-label caption class="text-center text-grey-5">
-                Yukpro v1.0.0
+                육프로 v1.0.0
               </q-item-label>
             </q-item-section>
           </q-item>
