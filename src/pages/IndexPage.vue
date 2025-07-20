@@ -51,7 +51,7 @@
 
     <!-- 주요 기능 소개 -->
     <div class="q-pa-md">
-      <div class="text-h6 q-mb-md">왜 Yukpro인가요?</div>
+      <div class="text-h6 q-mb-md">왜 육프로인가요?</div>
       <div class="row q-gutter-md">
         <q-card class="col-12 col-sm-4">
           <q-card-section class="text-center">
