@@ -1,133 +1,137 @@
+
 <template>
   <q-page class="bg-grey-1 min-h-screen">
     <!-- PWA 설치 배너 (5초 후 표시) -->
-    <transition name="slide-down">
-      <div
-        v-if="showPWABanner"
-        class="bg-orange-2 text-orange-9 q-pa-sm text-center"
-      >
-        <q-icon name="download" class="q-mr-xs" />
-        앱으로 설치하여 더 편리하게 이용하세요
-        <q-btn
-          flat
-          dense
-          icon="close"
-          class="float-right"
-          @click="closePWABanner"
-        />
+    <div class="content-container">
+      <transition name="slide-down">
+        <div
+          v-if="showPWABanner"
+          class="bg-orange-2 text-orange-9 q-pa-sm text-center"
+        >
+          <q-icon name="download" class="q-mr-xs" />
+          앱으로 설치하여 더 편리하게 이용하세요
+          <q-btn
+            flat
+            dense
+            icon="close"
+            class="float-right"
+            @click="closePWABanner"
+          />
+        </div>
+      </transition>
+
+      <!-- 검색 -->
+      <div class="q-pa-md text-center">
+        <q-input
+          v-model="searchKeyword"
+          placeholder="상품을 검색해보세요 (예: 한우, 등심)"
+          outlined
+          bg-color="white"
+          @keyup.enter="searchProducts"
+          class="search-input"
+        >
+          <template v-slot:prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
       </div>
-    </transition>
 
-    <!-- 검색 -->
-    <div class="q-pa-md">
-      <q-input
-        v-model="searchKeyword"
-        placeholder="상품을 검색해보세요 (예: 한우, 등심)"
-        outlined
-        bg-color="white"
-        @keyup.enter="searchProducts"
-      >
-        <template v-slot:prepend>
-          <q-icon name="search" />
-        </template>
-      </q-input>
-    </div>
-
-    <!-- 왜 육프로인가요? -->
-    <div class="q-pa-md">
-      <div class="text-h6 q-mb-md">왜 육프로인가요?</div>
-      <div class="row q-col-gutter-md">
-        <div v-for="(feature, index) in features" :key="index" class="col-12 col-sm-6">
-          <q-card flat bordered>
-            <q-card-section class="q-pa-md">
-              <div class="row items-center no-wrap">
-                <q-icon :name="feature.icon" size="2rem" :color="feature.color" class="q-mr-md" />
-                <div class="text-subtitle1 text-weight-medium">{{ feature.text }}</div>
-              </div>
-            </q-card-section>
-          </q-card>
+      <!-- 왜 육프로인가요? -->
+      <div class="q-pa-md text-center">
+        <div class="text-h6 q-mb-md">왜 육프로인가요?</div>
+        <div class="row q-col-gutter-md justify-center">
+          <div v-for="(feature, index) in features" :key="index" class="col-12 col-sm-10 col-md-8">
+            <q-card flat bordered>
+              <q-card-section class="q-pa-md">
+                <div class="row items-center justify-center">
+                  <q-icon :name="feature.icon" size="2rem" :color="feature.color" class="q-mr-md" />
+                  <div class="text-subtitle1 text-weight-medium">{{ feature.text }}</div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 인기 상품 -->
-    <div class="q-pa-md">
-      <div class="text-h6 q-mb-md">인기 상품</div>
-      <div class="row q-col-gutter-md">
-        <div v-for="product in popularProducts" :key="product.id" class="col-12 col-sm-6 col-md-4">
-          <q-card class="cursor-pointer" @click="viewProduct(product.id)">
-            <q-img :src="product.image" ratio="1">
-              <div class="absolute-top-right q-ma-sm">
-                <q-badge color="green" v-if="product.inStock" floating>
-                  재고 있음
-                </q-badge>
-                <q-badge color="orange" v-if="product.fastDelivery" floating>
-                  빠른배송
-                </q-badge>
-              </div>
-              <div class="absolute-bottom-right q-ma-sm">
-                <q-badge v-if="product.rating >= 4.5" color="purple" floating>
-                  베스트셀러
-                </q-badge>
-              </div>
-            </q-img>
-            <q-card-section>
-              <div class="row items-center justify-between">
-                <div class="text-subtitle1 text-weight-bold">{{ product.name }}</div>
-                <div class="row items-center">
-                  <q-icon name="star" color="amber" size="xs" />
-                  <span class="text-caption q-ml-xs">{{ product.rating }}</span>
+      <!-- 인기 상품 -->
+      <div class="q-pa-md text-center">
+        <div class="text-h6 q-mb-md">인기 상품</div>
+        <div class="row q-col-gutter-md justify-center">
+          <div v-for="product in popularProducts" :key="product.id" class="col-12 col-sm-6 col-md-4">
+            <q-card class="cursor-pointer" @click="viewProduct(product.id)">
+              <q-img :src="product.image" ratio="1">
+                <div class="absolute-top-right q-ma-sm">
+                  <q-badge color="green" v-if="product.inStock" floating>
+                    재고 있음
+                  </q-badge>
+                  <q-badge color="orange" v-if="product.fastDelivery" floating>
+                    빠른배송
+                  </q-badge>
                 </div>
-              </div>
-              <div class="text-h6 text-primary q-mt-sm">{{ product.price.toLocaleString() }}원/kg</div>
-              <div class="text-caption text-grey-7">{{ product.description }}</div>
-            </q-card-section>
-          </q-card>
+                <div class="absolute-bottom-right q-ma-sm">
+                  <q-badge v-if="product.rating >= 4.5" color="purple" floating>
+                    베스트셀러
+                  </q-badge>
+                </div>
+              </q-img>
+              <q-card-section>
+                <div class="row items-center justify-between">
+                  <div class="text-subtitle1 text-weight-bold">{{ product.name }}</div>
+                  <div class="row items-center">
+                    <q-icon name="star" color="amber" size="xs" />
+                    <span class="text-caption q-ml-xs">{{ product.rating }}</span>
+                  </div>
+                </div>
+                <div class="text-h6 text-primary q-mt-sm">{{ product.price.toLocaleString() }}원/kg</div>
+                <div class="text-caption text-grey-7">{{ product.description }}</div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 언박싱 리뷰 -->
-    <div class="q-pa-md bg-grey-2">
-      <div class="text-h6 q-mb-md">실시간 언박싱 리뷰</div>
-      <div class="row q-col-gutter-md">
-        <div v-for="review in unboxingReviews" :key="review.id" class="col-12 col-sm-6 col-md-4">
-          <q-card class="review-card">
-            <q-img
-              :src="review.thumbnail"
-              ratio="16/9"
-              class="review-thumbnail"
-            >
-              <template v-slot:default>
-                <div class="absolute-full flex flex-center" v-if="review.type === 'video'">
-                  <q-btn round color="white" text-color="primary" icon="play_circle" size="lg" />
+      <!-- 언박싱 리뷰 -->
+      <div class="q-pa-md bg-grey-2 text-center">
+        <div class="text-h6 q-mb-md">실시간 언박싱 리뷰</div>
+        <div class="row q-col-gutter-md justify-center">
+          <div v-for="review in unboxingReviews" :key="review.id" class="col-12 col-sm-6 col-md-4">
+            <q-card class="review-card">
+              <q-img
+                :src="review.thumbnail"
+                ratio="16/9"
+                class="review-thumbnail"
+              >
+                <template v-slot:default>
+                  <div class="absolute-full flex flex-center" v-if="review.type === 'video'">
+                    <q-btn round color="white" text-color="primary" icon="play_circle" size="lg" />
+                  </div>
+                </template>
+              </q-img>
+              <q-card-section class="q-pa-sm">
+                <div class="row items-center justify-between">
+                  <q-avatar size="40px">
+                    <img :src="review.profileImage">
+                  </q-avatar>
+                  <div class="col q-ml-sm text-left">
+                    <div class="text-subtitle2 text-weight-bold">{{ review.customerName }}</div>
+                    <div class="text-caption text-grey">{{ review.date }}</div>
+                  </div>
+                  <q-btn flat round icon="share" size="sm" />
                 </div>
-              </template>
-            </q-img>
-            <q-card-section class="q-pa-sm">
-              <div class="row items-center justify-between">
-                <q-avatar size="40px">
-                  <img :src="review.profileImage">
-                </q-avatar>
-                <div class="col q-ml-sm">
-                  <div class="text-subtitle2 text-weight-bold">{{ review.customerName }}</div>
-                  <div class="text-caption text-grey">{{ review.date }}</div>
+                <div class="text-body2 q-mt-sm text-left">{{ review.comment }}</div>
+                <div class="q-mt-sm">
+                  <q-chip
+                    dense
+                    :color="review.verified ? 'green' : 'grey'"
+                    text-color="white"
+                    icon="verified"
+                  >
+                    인증 구매
+                  </q-chip>
                 </div>
-                <q-btn flat round icon="share" size="sm" />
-              </div>
-              <div class="text-body2 q-mt-sm">{{ review.comment }}</div>
-              <div class="q-mt-sm">
-                <q-chip
-                  dense
-                  :color="review.verified ? 'green' : 'grey'"
-                  text-color="white"
-                  icon="verified"
-                >
-                  인증 구매
-                </q-chip>
-              </div>
-            </q-card-section>
-          </q-card>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </div>
     </div>
@@ -289,6 +293,17 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.search-input {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .slide-down-enter-active,
 .slide-down-leave-active {
   transition: all 0.3s ease;
@@ -320,6 +335,10 @@ onMounted(() => {
 @media (max-width: 599px) {
   .q-card {
     margin-bottom: 16px;
+  }
+
+  .content-container {
+    padding: 0 8px;
   }
 }
 </style>
